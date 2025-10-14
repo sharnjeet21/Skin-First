@@ -1,0 +1,371 @@
+.routine-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 160px);
+  background: #f0ebe5;
+}
+
+.routine-header {
+  margin-bottom: 2rem;
+}
+
+.routine-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.routine-card h1 {
+  color: #2d2d2d;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.routine-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.summary-button {
+  background: #d4a574;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.summary-button:hover {
+  background: #c19660;
+  transform: translateY(-1px);
+}
+
+.routine-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 20px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #666;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.tab-button.active {
+  background: #d4a574;
+  color: white;
+}
+
+.tab-button:hover:not(.active) {
+  background: #f8f6f3;
+  color: #2d2d2d;
+}
+
+.routine-section {
+  margin-bottom: 4rem;
+}
+
+.routine-section h2 {
+  color: #2d2d2d;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #d4a574;
+  display: inline-block;
+}
+
+.routine-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.step-image-placeholder {
+  width: 100%;
+  height: 120px;
+  background: #f8f6f3;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  border: 1px solid #e5e5e5;
+}
+
+.step-content h3 {
+  color: #2d2d2d;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.step-product {
+  color: #d4a574;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.step-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .routine-container {
+    padding: 1.5rem;
+  }
+
+  .routine-card {
+    padding: 2rem;
+  }
+
+  .routine-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .routine-tabs {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .tab-button {
+    flex: 1;
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .routine-steps {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .step-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .routine-container {
+    padding: 1rem;
+  }
+
+  .routine-card {
+    padding: 1.5rem;
+  }
+
+  .routine-card h1 {
+    font-size: 1.4rem;
+  }
+
+  .summary-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.dietary-content {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+}
+
+.dietary-overview {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dietary-overview h3 {
+  color: #2d2d2d;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.dietary-overview p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.foods-grid h4 {
+  color: #2d2d2d;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.foods-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.food-card {
+  background: #f8f6f3;
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid #e5e5e5;
+  transition: all 0.2s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.food-card h5 {
+  color: #d4a574;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.food-card p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.dietary-tips h4 {
+  color: #2d2d2d;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  font-weight: 600;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.tip-card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.tip-card:hover {
+  border-color: #d4a574;
+  transform: translateY(-2px);
+}
+
+.tip-card h5 {
+  color: #2d2d2d;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.tip-card p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Ad
+ditional spacing and styling improvements */
+.dietary-overview {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.foods-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Better spacing for mobile */
+@media (max-width: 768px) {
+  .dietary-content {
+    padding: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .foods-grid h4 {
+    margin-top: 1.5rem;
+  }
+
+  .dietary-tips h4 {
+    margin-top: 2rem;
+  }
+
+  .foods-list {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .tips-grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dietary-content {
+    padding: 1.5rem;
+  }
+
+  .dietary-overview {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+}

@@ -1,0 +1,418 @@
+.skincare101-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 160px);
+  background: #f0ebe5;
+}
+
+.skincare101-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.skincare101-header h1 {
+  color: #2d2d2d;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.skincare101-header p {
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skincare101-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.nav-tab {
+  background: white;
+  border: 2px solid #e5e5e5;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.nav-tab:hover {
+  border-color: #d4a574;
+  color: #2d2d2d;
+  transform: translateY(-2px);
+}
+
+.nav-tab.active {
+  background: #d4a574;
+  border-color: #d4a574;
+  color: white;
+  box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+}
+
+.skincare101-content {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.section-intro h2 {
+  color: #2d2d2d;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.section-intro p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}.skin
+-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.skin-type-card {
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.skin-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  border-color: #d4a574;
+}
+
+.skin-type-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #d4a574;
+}
+
+.skin-type-icon {
+  font-size: 2rem;
+  background: #d4a574;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skin-type-header h3 {
+  color: #2d2d2d;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.skin-type-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skin-type-description {
+  color: #495057;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid #d4a574;
+}
+
+.characteristics-section h4,
+.care-routine-section h4,
+.ingredients-section h4,
+.issues-section h4 {
+  color: #2d2d2d;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.characteristics-section h4:before {
+  content: "🔍";
+}
+
+.care-routine-section h4:before {
+  content: "🧴";
+}
+
+.ingredients-section h4:before {
+  content: "🌿";
+}
+
+.issues-section h4:before {
+  content: "⚠️";
+}
+
+.characteristics-list,
+.care-routine-list,
+.ingredients-list,
+.issues-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.characteristics-list li,
+.care-routine-list li,
+.ingredients-list li,
+.issues-list li {
+  background: white;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border-left: 3px solid #d4a574;
+  color: #495057;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.characteristics-list li:hover,
+.care-routine-list li:hover,
+.ingredients-list li:hover,
+.issues-list li:hover {
+  background: #f8f6f3;
+  transform: translateX(5px);
+}
+
+.basics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.basic-card {
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.basic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  border-color: #d4a574;
+}
+
+.basic-card h3 {
+  color: #2d2d2d;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #d4a574;
+}
+
+.basic-card p {
+  color: #495057;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tips-section h4 {
+  color: #2d2d2d;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tips-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips-section li {
+  background: white;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border-left: 3px solid #d4a574;
+  color: #495057;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.tips-section li:hover {
+  background: #f8f6f3;
+  transform: translateX(5px);
+}
+
+.additional-tips {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.additional-tips h3 {
+  color: #2d2d2d;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-item {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.tip-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #d4a574;
+}
+
+.tip-item h4 {
+  color: #2d2d2d;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.tip-item p {
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skincare101-container {
+    padding: 1.5rem;
+  }
+  
+  .skincare101-header h1 {
+    font-size: 2rem;
+  }
+  
+  .skincare101-header p {
+    font-size: 1rem;
+  }
+  
+  .skincare101-navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .nav-tab {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .skincare101-content {
+    padding: 2rem;
+  }
+  
+  .skin-types-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skin-type-card {
+    padding: 1.5rem;
+  }
+  
+  .basics-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .basic-card {
+    padding: 1.5rem;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skincare101-container {
+    padding: 1rem;
+  }
+  
+  .skincare101-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .skincare101-content {
+    padding: 1.5rem;
+  }
+  
+  .skin-type-card {
+    padding: 1.25rem;
+  }
+  
+  .skin-type-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .skin-type-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .basic-card {
+    padding: 1.25rem;
+  }
+  
+  .tip-item {
+    padding: 1.25rem;
+  }
+}
