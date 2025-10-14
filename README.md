@@ -48,8 +48,8 @@ Before running this project, make sure you have the following installed:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone <repository-url>
-cd beauty-quiz-app
+git clone <https://github.com/sharnjeet21/Skin-First.git>
+cd Skin-First
 ```
 
 ### Step 2: Install Dependencies
