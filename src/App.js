@@ -9,8 +9,6 @@ import QuizHistory from './components/QuizHistory';
 import Reminders from './components/Reminders';
 import FindDermatologist from './components/FindDermatologist';
 import {
-  ProductsPage,
-  TrendsPage,
   FavoritesPage
 } from './components/PlaceholderPages';
 import Profile from './components/Profile';
@@ -42,6 +40,31 @@ function App() {
 
   // Save to history when both recommendations and routine are ready
   useEffect(() => {
+    const saveQuizToHistory = (answers, routineData, recommendationsData) => {
+      if (!user) return;
+
+      const quizEntry = {
+        id: Date.now().toString(),
+        answers,
+        routine: routineData,
+        recommendations: recommendationsData || [],
+        completedAt: new Date().toISOString(),
+        userId: user.id
+      };
+
+      // Get existing history
+      const existingHistory = JSON.parse(localStorage.getItem(`quizHistory_${user.id}`) || '[]');
+
+      // Add new entry to the beginning
+      existingHistory.unshift(quizEntry);
+
+      // Keep only last 10 entries
+      const limitedHistory = existingHistory.slice(0, 10);
+
+      // Save back to localStorage
+      localStorage.setItem(`quizHistory_${user.id}`, JSON.stringify(limitedHistory));
+    };
+
     if (currentQuizAnswers && recommendations && routine) {
       saveQuizToHistory(currentQuizAnswers, routine, recommendations);
       setCurrentQuizAnswers(null); // Clear to prevent duplicate saves
@@ -204,30 +227,7 @@ Create a routine with 3-4 morning steps and 3-4 evening steps. Include 5-6 food 
     }
   };
 
-  const saveQuizToHistory = (answers, routineData, recommendationsData) => {
-    if (!user) return;
 
-    const quizEntry = {
-      id: Date.now().toString(),
-      answers,
-      routine: routineData,
-      recommendations: recommendationsData || [],
-      completedAt: new Date().toISOString(),
-      userId: user.id
-    };
-
-    // Get existing history
-    const existingHistory = JSON.parse(localStorage.getItem(`quizHistory_${user.id}`) || '[]');
-
-    // Add new entry to the beginning
-    existingHistory.unshift(quizEntry);
-
-    // Keep only last 10 entries
-    const limitedHistory = existingHistory.slice(0, 10);
-
-    // Save back to localStorage
-    localStorage.setItem(`quizHistory_${user.id}`, JSON.stringify(limitedHistory));
-  };
 
   const createFallbackRoutine = (answers) => {
     const skinType = answers.skinType || 'Normal';

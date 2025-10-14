@@ -25,16 +25,6 @@ const Reminders = ({ user }) => {
     }
   }, [user.id]);
 
-  const saveSettings = () => {
-    const settings = {
-      enabled: remindersEnabled,
-      morningTime,
-      eveningTime,
-      userId: user.id
-    };
-    localStorage.setItem(`reminders_${user.id}`, JSON.stringify(settings));
-  };
-
   const handleEnableReminders = async () => {
     if (!remindersEnabled) {
       // Request notification permission
@@ -55,14 +45,14 @@ const Reminders = ({ user }) => {
 
   const scheduleNotifications = () => {
     // Schedule morning reminder
-    const morningNotification = new Notification('Morning Skincare Routine', {
+    new Notification('Morning Skincare Routine', {
       body: 'Time for your morning skincare routine! Start with cleansing.',
       icon: '/favicon.ico',
       tag: 'morning-reminder'
     });
 
     // Schedule evening reminder  
-    const eveningNotification = new Notification('Evening Skincare Routine', {
+    new Notification('Evening Skincare Routine', {
       body: 'Time for your evening skincare routine! Don\'t forget your treatments.',
       icon: '/favicon.ico',
       tag: 'evening-reminder'
@@ -95,11 +85,7 @@ const Reminders = ({ user }) => {
     }
   };
 
-  const handleTimeInputClick = (inputRef) => {
-    if (inputRef.current) {
-      inputRef.current.showPicker();
-    }
-  };
+
 
   const formatTime = (time24) => {
     const [hours, minutes] = time24.split(':');
@@ -110,8 +96,18 @@ const Reminders = ({ user }) => {
 
   // Save settings whenever they change
   useEffect(() => {
+    const saveSettings = () => {
+      const settings = {
+        enabled: remindersEnabled,
+        morningTime,
+        eveningTime,
+        userId: user.id
+      };
+      localStorage.setItem(`reminders_${user.id}`, JSON.stringify(settings));
+    };
+    
     saveSettings();
-  }, [remindersEnabled, morningTime, eveningTime]);
+  }, [remindersEnabled, morningTime, eveningTime, user.id]);
 
   return (
     <div className="reminders-container">

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# 🌟 Skin-First Beauty Quiz App - Automated Setup & Run Script
-# This script will automatically set up and run the beauty quiz application
+# 🌟 Skin-First - Automated Setup & Run Script
+# This script will automatically set up and run the Skin-First application
 
 # Colors for output
 RED='\033[0;31m'
@@ -138,10 +138,10 @@ run_application() {
 
 # Main execution starts here
 clear
-print_header "🌟 SKIN-FIRST BEAUTY QUIZ APP SETUP 🌟"
+print_header "🌟 SKIN-FIRST SETUP 🌟"
 
 echo -e "${CYAN}Welcome to the automated setup script!${NC}"
-echo -e "${CYAN}This script will set up and run the Beauty Quiz App.${NC}"
+echo -e "${CYAN}This script will set up and run Skin-First.${NC}"
 echo ""
 
 # Step 1: Check prerequisites
@@ -149,7 +149,7 @@ print_header "📋 CHECKING PREREQUISITES"
 
 # Check if we're in the right directory
 if [ ! -f "package.json" ]; then
-    print_error "package.json not found. Please run this script from the beauty-quiz-app directory."
+    print_error "package.json not found. Please run this script from the Skin-First directory."
     exit 1
 fi
 
@@ -230,7 +230,7 @@ print_header "✅ SETUP COMPLETE"
 echo -e "${GREEN}🎉 Setup completed successfully!${NC}"
 echo ""
 echo -e "${CYAN}Project Features:${NC}"
-echo "• AI-Powered Beauty Quiz"
+echo "• AI-Powered Skincare Quiz"
 echo "• Personalized Product Recommendations"
 echo "• Skincare Routine Generation"
 echo "• Quiz History & Reports"

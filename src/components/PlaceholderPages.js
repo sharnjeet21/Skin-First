@@ -1,25 +1,6 @@
 import React from 'react';
 import './PlaceholderPages.css';
 
-export const ProductsPage = () => (
-  <div className="placeholder-page">
-    <div className="placeholder-content">
-      <h2>🛍️ Beauty Products</h2>
-      <p>Discover amazing beauty products curated just for you!</p>
-      <div className="coming-soon">Coming Soon</div>
-    </div>
-  </div>
-);
-
-export const TrendsPage = () => (
-  <div className="placeholder-page">
-    <div className="placeholder-content">
-      <h2>📈 Beauty Trends</h2>
-      <p>Stay updated with the latest beauty trends and innovations.</p>
-      <div className="coming-soon">Coming Soon</div>
-    </div>
-  </div>
-);
 
 export const BeautyTipsPage = () => (
   <div className="placeholder-page">

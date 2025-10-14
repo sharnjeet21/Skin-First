@@ -1,4 +1,4 @@
-# � Skain-First Beauty Quiz App
+# 🌟 Skin-First
 
 A comprehensive AI-powered skincare application that provides personalized beauty recommendations, skincare routines, and dietary advice based on user preferences and skin type analysis.
 
@@ -16,7 +16,7 @@ A comprehensive AI-powered skincare application that provides personalized beaut
 ## ✨ Features
 
 ### 🎯 Core Features
-- **AI-Powered Beauty Quiz** - Personalized skincare assessment
+- **AI-Powered Skincare Quiz** - Personalized skincare assessment
 - **Product Recommendations** - 5 tailored product suggestions per quiz
 - **Skincare Routines** - Morning and evening routine generation
 - **Dietary Advice** - Skin-healthy food recommendations
@@ -124,7 +124,7 @@ serve -s build
 ## 📁 Project Structure
 
 ```
-beauty-quiz-app/
+Skin-First/
 ├── public/
 │   ├── index.html
 │   └── favicon.ico

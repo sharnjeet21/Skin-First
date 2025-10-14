@@ -291,7 +291,7 @@ app.get('/api/favorites', authenticateToken, (req, res) => {
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Beauty Quiz API is running' });
+  res.json({ status: 'OK', message: 'Skin-First API is running' });
 });
 
 // Start server
